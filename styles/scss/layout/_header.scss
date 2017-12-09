@@ -1,0 +1,54 @@
+.bg-gradient {
+	background: url('../../img/layer-34.png') no-repeat center center;
+	background-size: cover;
+}
+
+.header {
+	color: $color-white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (min-width: 1230px) {
+			max-width: 1200px;
+		}
+	}
+	
+	.navbar {
+
+		&-nav {
+			.nav {
+
+				&-item {
+					@media (min-width: 992px) {
+						margin-left: 50px;
+					}
+				}
+
+				&-link {
+					color: $color-white;
+					opacity: .75;
+					font-size: 13px;
+					text-transform: uppercase;
+					font-weight: $font-bold;
+					font-family: $font-txt;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	&-title {
+
+		a {
+			font-size: 36px;
+			text-transform: uppercase;
+			color: $color-white;
+			font-weight: $font-normal;
+			line-height: 20px;
+		}
+	}
+}
