@@ -1,0 +1,31 @@
+.features {
+	padding: 100px 0 50px 0;
+
+	&-list {
+		text-align: center;
+		
+		&-item {
+			margin-bottom: 50px;
+
+
+			p {
+				line-height: 21px;
+				font-weight: $font-bold;
+				font-size: 14px;
+				color: $color-grey;
+			}
+		}
+
+		&-img {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.title-section {
+	text-transform: uppercase;
+	font-weight: $font-bold;
+	font-size: 14px;
+	color: $color-black;
+	margin-bottom: 15px;
+}

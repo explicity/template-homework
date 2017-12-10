@@ -1,0 +1,64 @@
+.welcome-section {
+	padding: 50px 0;	
+	color: $color-white;
+	min-height: calc(100vh - 100px);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	.container {
+		@media (min-width: 992px) {
+			max-width: 890px;
+		}
+	}
+
+	&-title {
+		font-size: 65px;
+		font-weight: $font-bold;
+		line-height: 71px;
+		text-transform: uppercase;
+		font-family: $font-logo;
+		margin-bottom: 25px;
+
+		@media (max-width: 1023px) {
+			font-size: 4.5vmax;
+			line-height: 5vmax;
+			margin-bottom: 10px;
+		}
+	}
+
+	&-info {
+		font-weight: $font-normal;
+		line-height: 33px;
+		font-size: 22px;
+		margin-bottom: 70px;
+
+		@media (max-width: 1023px) {
+			font-size: 2.8vmax;
+			line-height: 4vmax;
+		}
+	}
+}
+
+.btn {	
+
+	&-primary {
+		color: $color-white;
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+
+		&:hover {
+			background: $color-secondary;
+			border-color: $color-secondary;
+		}
+	}
+
+	&-lg {
+		border-radius: 0;
+		font-size: 13px;
+		text-transform: uppercase;
+		padding: 13px 40px;
+	}
+}

@@ -65,50 +65,246 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 1, ../scss/layout/_header.scss */
-.bg-gradient {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 7, ../scss/layout/_header.scss */
+.banner {
   background: url("../../img/layer-34.png") no-repeat center center;
   background-size: cover;
 }
 
-/* line 6, ../scss/layout/_header.scss */
+/* line 12, ../scss/layout/_header.scss */
 .header {
   color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 100px;
+  align-items: inherit;
 }
-/* line 11, ../scss/layout/_header.scss */
+/* line 17, ../scss/layout/_header.scss */
 .header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 @media (min-width: 1230px) {
-  /* line 11, ../scss/layout/_header.scss */
+  /* line 17, ../scss/layout/_header.scss */
   .header .container {
     max-width: 1200px;
   }
 }
 @media (min-width: 992px) {
-  /* line 25, ../scss/layout/_header.scss */
+  /* line 30, ../scss/layout/_header.scss */
   .header .navbar-nav .nav-item {
     margin-left: 50px;
   }
 }
-/* line 31, ../scss/layout/_header.scss */
+/* line 36, ../scss/layout/_header.scss */
 .header .navbar-nav .nav-link {
-  color: #fff;
-  opacity: .75;
+  color: #cbccd3;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   padding-right: 0;
+  transition: .3s;
 }
-/* line 46, ../scss/layout/_header.scss */
+/* line 45, ../scss/layout/_header.scss */
+.header .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+/* line 52, ../scss/layout/_header.scss */
+.header .navbar-toggler {
+  width: 35px;
+  height: 35px;
+  padding: 7px;
+  background-color: #e84545;
+  border-radius: 50%;
+  border-color: #e84545;
+  transform: translate3d(0, 0, 0);
+}
+/* line 61, ../scss/layout/_header.scss */
+.header .navbar-toggler .icon-bar {
+  background: #fff;
+  display: block;
+  height: 2px;
+  margin: 0;
+  transition: transform 0.1s ease-in;
+  opacity: 1;
+  transform-origin: 50% 50%;
+}
+/* line 70, ../scss/layout/_header.scss */
+.header .navbar-toggler .icon-bar:nth-child(2) {
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+/* line 80, ../scss/layout/_header.scss */
 .header-title a {
   font-size: 36px;
   text-transform: uppercase;
   color: #fff;
   font-weight: 400;
   line-height: 20px;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+
+/* line 92, ../scss/layout/_header.scss */
+.wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 101, ../scss/layout/_header.scss */
+.wrap-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  flex-direction: column;
+}
+
+/* line 1, ../scss/layout/_welcome-section.scss */
+.welcome-section {
+  padding: 50px 0;
+  color: #fff;
+  min-height: calc(100vh - 100px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  /* line 11, ../scss/layout/_welcome-section.scss */
+  .welcome-section .container {
+    max-width: 890px;
+  }
+}
+/* line 17, ../scss/layout/_welcome-section.scss */
+.welcome-section-title {
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 71px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 25px;
+}
+@media (max-width: 1023px) {
+  /* line 17, ../scss/layout/_welcome-section.scss */
+  .welcome-section-title {
+    font-size: 4.5vmax;
+    line-height: 5vmax;
+    margin-bottom: 10px;
+  }
+}
+/* line 32, ../scss/layout/_welcome-section.scss */
+.welcome-section-info {
+  font-weight: 400;
+  line-height: 33px;
+  font-size: 22px;
+  margin-bottom: 70px;
+}
+@media (max-width: 1023px) {
+  /* line 32, ../scss/layout/_welcome-section.scss */
+  .welcome-section-info {
+    font-size: 2.8vmax;
+    line-height: 4vmax;
+  }
+}
+
+/* line 47, ../scss/layout/_welcome-section.scss */
+.btn-primary {
+  color: #fff;
+  background-color: #e84545;
+  border-color: #e84545;
+}
+/* line 52, ../scss/layout/_welcome-section.scss */
+.btn-primary:hover {
+  background: #e84545;
+  border-color: #e84545;
+}
+/* line 58, ../scss/layout/_welcome-section.scss */
+.btn-lg {
+  border-radius: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 13px 40px;
+}
+
+/* line 1, ../scss/layout/_features-section.scss */
+.features {
+  padding: 100px 0 50px 0;
+}
+/* line 4, ../scss/layout/_features-section.scss */
+.features-list {
+  text-align: center;
+}
+/* line 7, ../scss/layout/_features-section.scss */
+.features-list-item {
+  margin-bottom: 50px;
+}
+/* line 11, ../scss/layout/_features-section.scss */
+.features-list-item p {
+  line-height: 21px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #6c7279;
+}
+/* line 19, ../scss/layout/_features-section.scss */
+.features-list-img {
+  margin-bottom: 20px;
+}
+
+/* line 25, ../scss/layout/_features-section.scss */
+.title-section {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2d3033;
+  margin-bottom: 15px;
+}
+
+/* line 3, ../scss/layout/_works-section.scss */
+.works-list {
+  margin: 0;
+}
+/* line 6, ../scss/layout/_works-section.scss */
+.works-list-item {
+  padding: 0.5px;
+  display: grid;
+}
+/* line 10, ../scss/layout/_works-section.scss */
+.works-list-item figure {
+  background-color: #e84545;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+/* line 18, ../scss/layout/_works-section.scss */
+.works-list-item figure:hover img {
+  overflow: hidden;
+  transform: scale(1.3);
+  opacity: .1;
+}
+/* line 28, ../scss/layout/_works-section.scss */
+.works-list-item .text-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+/* line 37, ../scss/layout/_works-section.scss */
+.works-list-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+  transform: scale(1);
+  transition: .3s ease-in-out;
 }
