@@ -5,6 +5,7 @@ body {
 }
 
 .banner {
+	margin-top: -100px;
 	background: url('../../img/layer-34.png') no-repeat center center;
 	background-size: cover;
 }
@@ -13,6 +14,7 @@ body {
 	color: $color-white;
 	height: 100px;
 	align-items: inherit;
+    transition: height 0.3s;
 
 	.container {
 		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
@@ -22,6 +24,15 @@ body {
 		}
 	}
 	
+	&-fixed {
+    	background-color: $color-blue;
+    	height: 70px;
+
+    	.container {
+    		box-shadow: none;
+    	}
+	}
+
 	.navbar {
 
 		&-nav {

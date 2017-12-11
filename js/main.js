@@ -4,11 +4,19 @@ $('button[data-target="#navbartoggler"]').on('click', function() {
 	$('.wrap').fadeIn('fast');
 });
 
-$('figure').hover(
-	function() {
-		$('.text-hover').show('fast');
-	},
-	function() {
-		$('.text-hover').hide('fast');
-	}
-);
+$(function(){
+ var shrinkHeader = 50;
+  $(window).scroll(function() {
+    var scroll = getCurrentScroll();
+      if ( scroll >= shrinkHeader ) {
+           $('.header').addClass('header-fixed');
+        }
+        else {
+            $('.header').removeClass('header-fixed');
+        }
+  });
+
+function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+    }
+});

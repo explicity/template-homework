@@ -13,12 +13,16 @@
 				display: flex;
 				position: relative;	
 
-				&:hover {
+				&:hover, :focus {
 
 					img {
 						overflow: hidden;
 						transform: scale(1.3);
 						opacity: .1;
+					}
+
+					.text-hover {
+						display: block;
 					}
 
 

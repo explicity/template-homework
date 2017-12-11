@@ -1,0 +1,27 @@
+.footer {
+	padding: 70px 0 50px 0;
+	background-color: $color-footer;
+
+	.title-section {
+		color: $color-white;
+	}
+
+	&-item {
+		margin-bottom: 30px;
+
+		p {
+			color: $color-white;
+			opacity: .5;
+			font-size: 14px;
+			line-height: 22.5px;
+			font-weight: $font-normal;
+		}
+
+		.social-section {
+			
+			a {
+				color: $color-white;
+			}
+		}
+	}
+} 
