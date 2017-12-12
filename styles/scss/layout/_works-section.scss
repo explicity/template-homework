@@ -35,10 +35,15 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 				display: none;
-				color: $color-white;
+
+				.title-section {
+					color: $color-white;
+				}
 
 				p {
-
+					font-size: 14px;
+					font-weight: $font-normal;
+					color: $color-white;
 				}
 
 			}

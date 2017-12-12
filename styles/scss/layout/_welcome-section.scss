@@ -43,24 +43,3 @@
 		}
 	}
 }
-
-.btn {	
-
-	&-primary {
-		color: $color-white;
-		background-color: $color-secondary;
-		border-color: $color-secondary;
-
-		&:hover {
-			background: $color-secondary;
-			border-color: $color-secondary;
-		}
-	}
-
-	&-lg {
-		border-radius: 0;
-		font-size: 13px;
-		text-transform: uppercase;
-		padding: 13px 40px;
-	}
-}

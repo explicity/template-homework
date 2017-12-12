@@ -1,0 +1,23 @@
+.download {
+	padding: 100px 0;
+
+	.header-section {
+		margin-bottom: 15px;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: $font-bold;
+		line-height: 21px;
+		color: $color-black;
+		margin-bottom: 40px;
+	}
+}
+
+.header-section {
+	font-size: 28px;
+	font-weight: $font-light;
+	line-height: 21px;
+	color: $color-black;
+}
