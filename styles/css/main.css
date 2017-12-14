@@ -278,26 +278,29 @@ body {
 /* line 6, ../scss/layout/_works-section.scss */
 .works-list-item {
   padding: 0.5px;
-  display: grid;
+  display: inherit;
 }
 /* line 10, ../scss/layout/_works-section.scss */
 .works-list-item figure {
-  background-color: #e84545;
+  width: 100%;
   overflow: hidden;
-  display: flex;
+  background-color: #e84545;
+}
+/* line 16, ../scss/layout/_works-section.scss */
+.works-list-item figure a {
   position: relative;
 }
-/* line 18, ../scss/layout/_works-section.scss */
+/* line 22, ../scss/layout/_works-section.scss */
 .works-list-item figure:hover img, .works-list-item figure :focus img {
   overflow: hidden;
   transform: scale(1.3);
   opacity: .1;
 }
-/* line 24, ../scss/layout/_works-section.scss */
+/* line 28, ../scss/layout/_works-section.scss */
 .works-list-item figure:hover .text-hover, .works-list-item figure :focus .text-hover {
   display: block;
 }
-/* line 32, ../scss/layout/_works-section.scss */
+/* line 36, ../scss/layout/_works-section.scss */
 .works-list-item .text-hover {
   position: absolute;
   top: 50%;
@@ -305,21 +308,20 @@ body {
   transform: translate(-50%, -50%);
   display: none;
 }
-/* line 39, ../scss/layout/_works-section.scss */
+/* line 43, ../scss/layout/_works-section.scss */
 .works-list-item .text-hover .title-section {
   color: #fff;
 }
-/* line 43, ../scss/layout/_works-section.scss */
+/* line 47, ../scss/layout/_works-section.scss */
 .works-list-item .text-hover p {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
 }
-/* line 52, ../scss/layout/_works-section.scss */
+/* line 56, ../scss/layout/_works-section.scss */
 .works-list-img {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   opacity: 1;
   transform: scale(1);
   transition: .3s ease-in-out;
@@ -444,54 +446,96 @@ body {
 .header-section {
   font-size: 28px;
   font-weight: 300;
-  line-height: 21px;
   color: #2d3033;
 }
 
-/* padding-bottom and top for image */
-/* line 2, ../scss/layout/_lightbox.scss */
-.mfp-no-margins img.mfp-img {
-  padding: 0;
+/* line 3, ../scss/layout/_carousel-section.scss */
+.carousel-img {
+  width: 50%;
+}
+@media (max-width: 991px) {
+  /* line 3, ../scss/layout/_carousel-section.scss */
+  .carousel-img {
+    width: 100%;
+  }
+}
+/* line 11, ../scss/layout/_carousel-section.scss */
+.carousel-indicators {
+  left: 12.5%;
+  bottom: 30px;
+}
+/* line 15, ../scss/layout/_carousel-section.scss */
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+@media (max-width: 991px) {
+  /* line 11, ../scss/layout/_carousel-section.scss */
+  .carousel-indicators {
+    left: 0;
+  }
 }
 
-/* position of shadow behind the image */
-/* line 6, ../scss/layout/_lightbox.scss */
-.mfp-no-margins .mfp-figure:after {
-  top: 0;
-  bottom: 0;
+/* line 27, ../scss/layout/_carousel-section.scss */
+.blockquote {
+  background-color: #53354a;
 }
-
-/* padding for main container */
-/* line 11, ../scss/layout/_lightbox.scss */
-.mfp-no-margins .mfp-container {
-  padding: 0;
+@media (min-width: 992px) {
+  /* line 27, ../scss/layout/_carousel-section.scss */
+  .blockquote {
+    position: absolute;
+    left: auto;
+    right: auto;
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
 }
-
-/* line 15, ../scss/layout/_lightbox.scss */
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+/* line 41, ../scss/layout/_carousel-section.scss */
+.blockquote-main {
+  padding: 15px;
+  color: #fff;
 }
-
-/* line 25, ../scss/layout/_lightbox.scss */
-.mfp-with-zoom.mfp-ready .mfp-container {
-  opacity: 1;
+@media (min-width: 992px) {
+  /* line 41, ../scss/layout/_carousel-section.scss */
+  .blockquote-main {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    right: 20%;
+  }
 }
-
-/* line 28, ../scss/layout/_lightbox.scss */
-.mfp-with-zoom.mfp-ready.mfp-bg {
-  opacity: 0.8;
+/* line 52, ../scss/layout/_carousel-section.scss */
+.blockquote-main p {
+  font-family: "Cardo", serif;
+  font-size: 36px;
+  font-style: italic;
+  line-height: 42px;
+  margin-bottom: 15px;
 }
-
-/* line 32, ../scss/layout/_lightbox.scss */
-.mfp-with-zoom.mfp-removing .mfp-container,
-.mfp-with-zoom.mfp-removing.mfp-bg {
-  opacity: 0;
+@media (max-width: 1439px) {
+  /* line 52, ../scss/layout/_carousel-section.scss */
+  .blockquote-main p {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+/* line 65, ../scss/layout/_carousel-section.scss */
+.blockquote-main footer {
+  text-transform: uppercase;
+  line-height: 21px;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 50px;
+}
+@media (max-width: 991px) {
+  /* line 65, ../scss/layout/_carousel-section.scss */
+  .blockquote-main footer {
+    font-size: 10px;
+  }
 }
 
 /* line 1, ../scss/layout/_btn.scss */
