@@ -1,7 +1,18 @@
-$('button[data-target="#navbartoggler"]').on('click', function() {
-	$('nav[id="navbartoggler"]').addClass('wrap');
-	$('nav[id="navbartoggler"] ul').addClass('wrap-popup');
+NavBtn = $('button[data-target="#navbartoggler"]');
+
+NavBtn.on('click', function() {
+	$('nav[id="navbartoggler"] ul').toggleClass('wrap-popup');
 	$('.wrap').fadeIn('fast');
+    NavBtn.attr('id', 'close-popup');
+    NavBtn.toggleClass('btn-active');
+
+    $('#close-popup').on('click', function () {
+        $('.wrap').hide();
+        NavBtn.removeAttr('id');
+        $('nav').removeAttr('style');
+        NavBtn.toggleClass('btn-active');
+    });
+
 });
 
 $(function(){
